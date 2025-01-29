@@ -32,9 +32,6 @@
 			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
 			System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
 			System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-			System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-			System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
 			this.panel2 = new System.Windows.Forms.Panel();
 			this.label5 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
@@ -58,20 +55,13 @@
 			this.label2 = new System.Windows.Forms.Label();
 			this.timer1 = new System.Windows.Forms.Timer(this.components);
 			this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-			this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-			this.panel6 = new System.Windows.Forms.Panel();
-			this.panel7 = new System.Windows.Forms.Panel();
 			this.label3 = new System.Windows.Forms.Label();
-			this.label6 = new System.Windows.Forms.Label();
 			this.panel2.SuspendLayout();
 			this.panel1.SuspendLayout();
 			this.panel5.SuspendLayout();
 			this.panel4.SuspendLayout();
 			this.panel3.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
-			this.panel6.SuspendLayout();
-			this.panel7.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// panel2
@@ -131,9 +121,9 @@
 			this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.button8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
 			this.button8.ForeColor = System.Drawing.Color.White;
-			this.button8.Location = new System.Drawing.Point(38, 405);
+			this.button8.Location = new System.Drawing.Point(3, 405);
 			this.button8.Name = "button8";
-			this.button8.Size = new System.Drawing.Size(184, 39);
+			this.button8.Size = new System.Drawing.Size(219, 39);
 			this.button8.TabIndex = 6;
 			this.button8.Text = "Çıkış Yap";
 			this.button8.UseVisualStyleBackColor = true;
@@ -144,9 +134,9 @@
 			this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.button7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
 			this.button7.ForeColor = System.Drawing.Color.White;
-			this.button7.Location = new System.Drawing.Point(38, 351);
+			this.button7.Location = new System.Drawing.Point(3, 351);
 			this.button7.Name = "button7";
-			this.button7.Size = new System.Drawing.Size(184, 39);
+			this.button7.Size = new System.Drawing.Size(219, 39);
 			this.button7.TabIndex = 2;
 			this.button7.Text = "Ayarlar";
 			this.button7.UseVisualStyleBackColor = true;
@@ -157,12 +147,13 @@
 			this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.button6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
 			this.button6.ForeColor = System.Drawing.Color.White;
-			this.button6.Location = new System.Drawing.Point(38, 298);
+			this.button6.Location = new System.Drawing.Point(3, 298);
 			this.button6.Name = "button6";
-			this.button6.Size = new System.Drawing.Size(184, 39);
+			this.button6.Size = new System.Drawing.Size(219, 39);
 			this.button6.TabIndex = 5;
 			this.button6.Text = "Dashboard";
 			this.button6.UseVisualStyleBackColor = true;
+			this.button6.Click += new System.EventHandler(this.button6_Click);
 			// 
 			// button5
 			// 
@@ -170,12 +161,13 @@
 			this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.button5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
 			this.button5.ForeColor = System.Drawing.Color.White;
-			this.button5.Location = new System.Drawing.Point(38, 244);
+			this.button5.Location = new System.Drawing.Point(3, 244);
 			this.button5.Name = "button5";
-			this.button5.Size = new System.Drawing.Size(184, 39);
+			this.button5.Size = new System.Drawing.Size(219, 39);
 			this.button5.TabIndex = 4;
 			this.button5.Text = "Banka Hareketleri";
 			this.button5.UseVisualStyleBackColor = true;
+			this.button5.Click += new System.EventHandler(this.button5_Click);
 			// 
 			// button4
 			// 
@@ -183,12 +175,13 @@
 			this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.button4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
 			this.button4.ForeColor = System.Drawing.Color.White;
-			this.button4.Location = new System.Drawing.Point(38, 188);
+			this.button4.Location = new System.Drawing.Point(3, 188);
 			this.button4.Name = "button4";
-			this.button4.Size = new System.Drawing.Size(184, 39);
+			this.button4.Size = new System.Drawing.Size(219, 39);
 			this.button4.TabIndex = 3;
 			this.button4.Text = "Giderler";
 			this.button4.UseVisualStyleBackColor = true;
+			this.button4.Click += new System.EventHandler(this.button4_Click);
 			// 
 			// button3
 			// 
@@ -196,9 +189,9 @@
 			this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.button3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
 			this.button3.ForeColor = System.Drawing.Color.White;
-			this.button3.Location = new System.Drawing.Point(38, 132);
+			this.button3.Location = new System.Drawing.Point(3, 132);
 			this.button3.Name = "button3";
-			this.button3.Size = new System.Drawing.Size(184, 39);
+			this.button3.Size = new System.Drawing.Size(219, 39);
 			this.button3.TabIndex = 2;
 			this.button3.Text = "Faturalar";
 			this.button3.UseVisualStyleBackColor = true;
@@ -209,12 +202,13 @@
 			this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.button2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
 			this.button2.ForeColor = System.Drawing.Color.White;
-			this.button2.Location = new System.Drawing.Point(38, 77);
+			this.button2.Location = new System.Drawing.Point(3, 77);
 			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(184, 39);
+			this.button2.Size = new System.Drawing.Size(219, 39);
 			this.button2.TabIndex = 2;
 			this.button2.Text = "Bankalar";
 			this.button2.UseVisualStyleBackColor = true;
+			this.button2.Click += new System.EventHandler(this.button2_Click);
 			// 
 			// button1
 			// 
@@ -222,9 +216,9 @@
 			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.button1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
 			this.button1.ForeColor = System.Drawing.Color.White;
-			this.button1.Location = new System.Drawing.Point(38, 21);
+			this.button1.Location = new System.Drawing.Point(3, 21);
 			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(184, 39);
+			this.button1.Size = new System.Drawing.Size(219, 39);
 			this.button1.TabIndex = 1;
 			this.button1.Text = "Kategoriler";
 			this.button1.UseVisualStyleBackColor = true;
@@ -337,7 +331,7 @@
 			this.chart1.ChartAreas.Add(chartArea1);
 			legend1.Name = "Legend1";
 			this.chart1.Legends.Add(legend1);
-			this.chart1.Location = new System.Drawing.Point(253, 349);
+			this.chart1.Location = new System.Drawing.Point(449, 349);
 			this.chart1.Name = "chart1";
 			series1.ChartArea = "ChartArea1";
 			series1.Legend = "Legend1";
@@ -347,64 +341,17 @@
 			this.chart1.TabIndex = 11;
 			this.chart1.Text = "chart1";
 			// 
-			// chart2
-			// 
-			chartArea2.Name = "ChartArea1";
-			this.chart2.ChartAreas.Add(chartArea2);
-			legend2.Name = "Legend1";
-			this.chart2.Legends.Add(legend2);
-			this.chart2.Location = new System.Drawing.Point(699, 349);
-			this.chart2.Name = "chart2";
-			series2.ChartArea = "ChartArea1";
-			series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-			series2.Legend = "Legend1";
-			series2.Name = "Faturalar";
-			this.chart2.Series.Add(series2);
-			this.chart2.Size = new System.Drawing.Size(416, 267);
-			this.chart2.TabIndex = 12;
-			this.chart2.Text = "chart2";
-			// 
-			// panel6
-			// 
-			this.panel6.BackColor = System.Drawing.Color.Silver;
-			this.panel6.Controls.Add(this.label3);
-			this.panel6.Location = new System.Drawing.Point(253, 278);
-			this.panel6.Name = "panel6";
-			this.panel6.Size = new System.Drawing.Size(416, 56);
-			this.panel6.TabIndex = 13;
-			// 
-			// panel7
-			// 
-			this.panel7.BackColor = System.Drawing.Color.Silver;
-			this.panel7.Controls.Add(this.label6);
-			this.panel7.Location = new System.Drawing.Point(699, 278);
-			this.panel7.Name = "panel7";
-			this.panel7.Size = new System.Drawing.Size(416, 56);
-			this.panel7.TabIndex = 14;
-			// 
 			// label3
 			// 
 			this.label3.AutoSize = true;
 			this.label3.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
 			this.label3.ForeColor = System.Drawing.Color.Black;
-			this.label3.Location = new System.Drawing.Point(3, 2);
+			this.label3.Location = new System.Drawing.Point(473, 295);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(368, 42);
 			this.label3.TabIndex = 8;
 			this.label3.Text = "Bankalar ve Banka Hesaplarındaki Para Miktarlarına\r\nAşağıdaki Grafikten Ulaşabili" +
     "rsiniz.\r\n";
-			// 
-			// label6
-			// 
-			this.label6.AutoSize = true;
-			this.label6.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.label6.ForeColor = System.Drawing.Color.Black;
-			this.label6.Location = new System.Drawing.Point(3, 2);
-			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(347, 42);
-			this.label6.TabIndex = 9;
-			this.label6.Text = "Ödenen ve Ödenmesi Gereken Fatura Tutarlarına\r\nAşağıdaki Grafikten Ulaşabilirsini" +
-    "z.\r\n";
 			// 
 			// FrmDashboard
 			// 
@@ -412,9 +359,7 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
 			this.ClientSize = new System.Drawing.Size(1163, 628);
-			this.Controls.Add(this.panel7);
-			this.Controls.Add(this.panel6);
-			this.Controls.Add(this.chart2);
+			this.Controls.Add(this.label3);
 			this.Controls.Add(this.chart1);
 			this.Controls.Add(this.panel5);
 			this.Controls.Add(this.panel4);
@@ -436,12 +381,8 @@
 			this.panel3.ResumeLayout(false);
 			this.panel3.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
-			this.panel6.ResumeLayout(false);
-			this.panel6.PerformLayout();
-			this.panel7.ResumeLayout(false);
-			this.panel7.PerformLayout();
 			this.ResumeLayout(false);
+			this.PerformLayout();
 
 		}
 
@@ -470,11 +411,7 @@
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Timer timer1;
 		private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
-		private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
-		private System.Windows.Forms.Panel panel6;
-		private System.Windows.Forms.Panel panel7;
 		private System.Windows.Forms.Label label3;
-		private System.Windows.Forms.Label label6;
 	}
 }
 

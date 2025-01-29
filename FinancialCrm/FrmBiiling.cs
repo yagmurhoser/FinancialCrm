@@ -23,6 +23,33 @@ namespace FinancialCrm
 		{
 			var value = db.Bills.ToList();
 			dataGridView1.DataSource = value;
+
+
+			// Veritabanından Bills tablosundaki verileri çek
+			var billsData = db.Bills.Select(x => new
+			{
+				x.BillTitle,   // Fatura türü (Elektrik, Su, İnternet vb.)
+				x.BillAmount  // Fatura tutarı
+			}).ToList();
+
+			// Önce chart'ı temizle
+			chart1.Series.Clear();
+
+			// Yeni bir seri oluştur ve Pie Chart olarak ayarla
+			var series = chart1.Series.Add("Bills");
+			series.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+
+			// Verileri Pie Chart'a ekle
+			foreach (var item in billsData)
+			{
+				series.Points.AddXY(item.BillTitle, item.BillAmount);
+			}
+
+			// Grafik etiketlerini göstermek için
+			series.IsValueShownAsLabel = true;
+
+
+
 		}
 
 		private void button9_Click(object sender, EventArgs e)
@@ -94,6 +121,46 @@ namespace FinancialCrm
 		private void label6_Click(object sender, EventArgs e)
 		{
 			Application.Exit();
+		}
+
+		private void button4_Click(object sender, EventArgs e)
+		{
+			FrmBiiling biil = new FrmBiiling();
+			biil.Show();
+			this.Hide();
+		}
+
+		private void button6_Click(object sender, EventArgs e)
+		{
+			FrmDashboard form = new FrmDashboard();
+			form.Show();
+			this.Hide();
+		}
+
+		private void button5_Click(object sender, EventArgs e)
+		{
+			FrmBankaHareketleri form = new FrmBankaHareketleri();
+			form.Show();
+			this.Hide();
+		}
+
+		
+
+		private void dataGridView1_CellFormatting_1(object sender, DataGridViewCellFormattingEventArgs e)
+		{
+			if (e.RowIndex % 2 == 0) // Çift satırlar için
+			{
+				dataGridView1.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Orange;
+			}
+			else // Tek satırlar için
+			{
+				dataGridView1.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.WhiteSmoke;
+			}
+		}
+
+		private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+		{
+
 		}
 	}
 }

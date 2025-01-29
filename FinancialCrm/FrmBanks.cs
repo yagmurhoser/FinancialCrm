@@ -63,5 +63,24 @@ namespace FinancialCrm
 		{
 			Application.Exit();
 		}
+
+		private void button6_Click(object sender, EventArgs e)
+		{
+			FrmDashboard form = new FrmDashboard();
+			form.Show();
+			this.Hide();
+		}
+
+		private void button5_Click(object sender, EventArgs e)
+		{
+			FrmBankaHareketleri form = new FrmBankaHareketleri();
+			form.Show();
+			this.Hide();
+		}
+
+		private void button2_Click(object sender, EventArgs e)
+		{
+
+		}
 	}
 }

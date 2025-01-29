@@ -47,21 +47,8 @@ namespace FinancialCrm
 				series.Points.AddXY(item.BankTitle, item.BankBalance);
 			}
 
-			// Chart 2 kodları
-
-			var billData = db.Bills.Select(x => new
-			{
-				x.BillTitle,
-				x.BillAmount
-			}).ToList();
-			chart2.Series.Clear();
-
-			var series2 = chart2.Series.Add("Faturalar");
-			series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Renko;
-			foreach (var item in billData)
-			{
-				series2.Points.AddXY(item.BillTitle, item.BillAmount);
-			}
+			
+			
 
 		}
 
@@ -92,6 +79,34 @@ namespace FinancialCrm
 				lblBillTitle.Text = "Su Faturası";
 				lblBillAmount.Text = values.ToString();
 			}
+		}
+
+		private void button4_Click(object sender, EventArgs e)
+		{
+			FrmBiiling biil = new FrmBiiling();
+			biil.Show();
+			this.Hide();
+		}
+
+		private void button2_Click(object sender, EventArgs e)
+		{
+			FrmBanks banks = new FrmBanks();
+			banks.Show();
+			this.Hide();
+		}
+
+		private void button5_Click(object sender, EventArgs e)
+		{
+			FrmBankaHareketleri form = new FrmBankaHareketleri();
+			form.Show();
+			this.Hide();
+		}
+
+		private void button6_Click(object sender, EventArgs e)
+		{
+			FrmDashboard form = new FrmDashboard();
+			form.Show();
+			this.Hide();
 		}
 	}
 }
