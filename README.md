@@ -11,7 +11,6 @@ Bu proje, Murat Yücedağ'ın **C# Eğitim Kampı** eğitimi kapsamında **Finan
 ![Image](https://github.com/user-attachments/assets/a83ba754-180b-4ee4-a8f6-9550bb837e4a) <br> <br>
 ![Image](https://github.com/user-attachments/assets/cdc917bb-63c0-48b4-b345-b9bb2dd2dd87) <br> <br>
 📧 İletişim:
-Eğer herhangi bir sorunuz veya öneriniz varsa, aşağıdaki kanallardan bana ulaşabilirsiniz:
+Eğer herhangi bir sorunuz veya öneriniz varsa, aşağıdan bana ulaşabilirsiniz:
 
-💼 LinkedIn: Yağmur Hoşer<br>
 📧 E-posta: yagmurhoser01@gmail.com
